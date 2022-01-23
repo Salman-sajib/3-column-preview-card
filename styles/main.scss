@@ -1,0 +1,129 @@
+@import "./reset.scss";
+@import "./veriables.scss";
+
+h1,
+p {
+  color: $Very-light-gray;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: $font-Big-Shoulders-Display;
+}
+
+p {
+  font-size: 0.95rem;
+  font-family: $font-Lexend-Deca;
+}
+
+.btn {
+  font-family: $font-Lexend-Deca;
+  padding: 0.5em 1.5em;
+  border: 0;
+  outline: none;
+  border: 2px solid $Very-light-gray;
+  border-radius: 50px;
+  background: $Very-light-gray;
+  transition: all 20s0ms ease-in-out;
+
+  &:hover {
+    color: $Very-light-gray;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  background: $Very-light-gray;
+}
+
+.container {
+  min-width: 350px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  & > * {
+    padding: 3em;
+  }
+
+  .sedan {
+    background: $Bright-orange;
+  }
+
+  .suv {
+    background: $Dark-cyan;
+  }
+
+  .lexury {
+    background: $Very-dark-cyan;
+  }
+
+  .content {
+    & > * + * {
+      margin-top: 1.5em;
+    }
+
+    .btn-sedan {
+      color: $Bright-orange;
+      transition: color 20s0ms ease-in-out;
+      &:hover {
+        color: $Very-light-gray;
+      }
+    }
+
+    .btn-suv {
+      color: $Dark-cyan;
+      transition: color 20s0ms ease-in-out;
+      &:hover {
+        color: $Very-light-gray;
+      }
+    }
+
+    .btn-lexury {
+      color: $Very-dark-cyan;
+      transition: color 20s0ms ease-in-out;
+      &:hover {
+        color: $Very-light-gray;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  main {
+    min-height: 100%;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card {
+    max-width: 100%;
+    display: flex;
+
+    & > * {
+      padding: 4em 3em;
+    }
+
+    .btn {
+      margin-top: 4em;
+    }
+  }
+}
